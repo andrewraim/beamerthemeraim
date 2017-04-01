@@ -8,4 +8,5 @@ bib:
 
 clean:
 	rm -f *.aux *.log *.nav *.out $(PROJNAME).pdf *.snm *.toc *.vrb
+	rm -f *.bbl *.blg
 
