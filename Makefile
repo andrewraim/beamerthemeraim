@@ -1,8 +1,10 @@
-PROJNAME := example-slides.tex
+PROJNAME := example-slides
 
 main:
 	pdflatex $(PROJNAME)
-	pdflatex $(PROJNAME)
+
+bib:
+	bibtex $(PROJNAME)
 
 clean:
 	rm -f *.aux *.log *.nav *.out $(PROJNAME).pdf *.snm *.toc *.vrb

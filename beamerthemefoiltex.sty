@@ -9,13 +9,16 @@
 % \usetheme{foiltex}
 % ...
 % 
-% Andrew Raim <araim1@umbc.edu>
+% Andrew Raim <andrew.raim@gmail.com>
 
 \mode<presentation>
 
 \useinnertheme{default}
+\usetheme{default}
 
 \setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{enumerate item}[default]
 \setbeamertemplate{frametitle}[default][center]
 \setbeamertemplate{navigation symbols}{}
 
@@ -41,10 +44,9 @@
 \setbeamercolor{bibliography entry book}{fg = black}
 \setbeamercolor{bibliography entry location}{fg = black}
 
-
-\setbeamerfont{title}{series=\bfseries, size = \Huge}
+\setbeamerfont{title}{series=\bfseries, size = \Large}
 \setbeamerfont{frametitle}{series=\bfseries}
-\setbeamerfont{author}{series=\bfseries, size = \LARGE}
+\setbeamerfont{author}{series=\bfseries, size = \large}
 \setbeamerfont{institute}{size = \normalsize}
 
 % Take away *most* of the indentation from the "description" list environment
@@ -59,7 +61,7 @@
 % the default contents of footline
 % author(institute)		title		section::subsection		page/pagetotal
 \newcommand{\my@footline}{%
-  \insertshortauthor \, (\insertshortinstitute)
+  \insertshortauthor
   \hfill
   \insertshorttitle
   \hfill
@@ -75,11 +77,12 @@
   \end{beamercolorbox}}
 
 % The user can override the default \my@footline by \setfootline{whatever}
+% \renewcommand{\setfootline}[1]{\renewcommand{\my@footline}{#1}}
 \newcommand{\setfootline}[1]{\renewcommand{\my@footline}{#1}}
 
 
 % Uncomment these to widen the margins
-%\setbeamersize{text margin left=5mm}
+\setbeamersize{text margin left=5mm}
 %\setbeamersize{text margin right=5mm}
 
 
@@ -108,5 +111,12 @@
 \setbeamertemplate{bibliography entry title}{}
 \setbeamertemplate{bibliography entry location}{}
 \setbeamertemplate{bibliography entry note}{}
+
+\newcommand\numbered{\setbeamertemplate{footline}{%
+  \raisebox{5pt}{\makebox[\paperwidth]{%
+  \hfill\makebox[10pt]{%
+  \scriptsize\insertframenumber}}}}}
+
+\newcommand\unnumbered{\setbeamertemplate{footline}{}\addtocounter{framenumber}{-1}}
 
 \mode<all>

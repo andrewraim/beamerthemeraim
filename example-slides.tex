@@ -1,140 +1,52 @@
-% First line is a Workaround to make example compile on math.umbc.edu machines
-% Shouldn't be needed in general
-% See: http://old.nabble.com/incompatible-list-can%27t-be-unboxed-with-every-beamer-document-td24108128.html
-\RequirePackage{atbegshi}
-
-\documentclass[8pt,final,hyperref={pdfpagelabels=false},xcolor=dvipsnames]{beamer}
+\documentclass[10pt,final,xcolor=svgnames]{beamer}
 \mode <presentation>
 
 \usetheme{foiltex}
 
-\usepackage{epsfig}
-\usepackage{geometry}
-\usepackage{color}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{verbatim}
-
+\usepackage{natbib}
 
 \begin{document}
 
-\title[Example of FoilTex-like Theme]{Sample presentation using a FoilTeX-like Theme}
-\author[M.Klein, A. Raim]{Martin D. Klein, Andrew M. Raim}
-\date{2010}
-\institute[UMBC]{
-Department of Mathematics and Statistics\\
-University of Maryland, Baltimore County\\
-\url{mklein1@umbc.edu, araim1@umbc.edu}}
+\title[Short title]{Title of My Talk}
+\author[My Name]{My Name}
+\institute[My Institution]{My Institution}
+\date[3/31/2017]{March 31, 2017}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------
 \begin{frame}[plain]
 \maketitle
+\vspace{-1em}
+\begin{center}
+\vspace{1em}
+\end{center}
 \end{frame}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Note}
-\begin{frame}{Note}
-The rest of this example presentation mimics the slides from
-\url{http://math.arizona.edu/~swig/documentation/powerwhat/}
-(see foiltex-example.pdf). The idea was to create a similar look.
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Motivation}
-\begin{frame}{Motivation}
-\begin{Witemize}
-
-\item (m a t h) Graduate students and professors use Latex
-
-\item Create a .pdf presentation, compatible with different operating systems
-
-\end{Witemize}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Mechanics}
-\begin{frame}{Mechanics}
-\begin{Witemize}[10pt]
-\item write/rewrite file.tex\\
-\item latex file.tex (creates file.dvi, if everything works)\\
-\item dvips file.dvi (-o) (creates file.ps)\\
-\item ps2pdf file.ps (creates file.pdf !)\\
-\end{Witemize}
-
-Suggestions for editing: use \textbf{Kile}, WinEdt, etc.
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Latex presentations}
+\section{Introduction}
+%----------------------------------------------------------------
 \begin{frame}{Overview}
-\begin{Witemize}
-\item Main classes for Latex presentations:\\
-\hspace*{.5cm}foiltex, prosper, and beamer\\
-\item Setting up the tex files for each\\
-\item Features and layouts\\
-\item References for further learning\\
+\begin{Witemize}[10pt]
+\item Here is an example of a talk using the ``foiltex'' beamer theme.
+\item The ``Witemize'' block is like ``itemize'' except extra spacing can
+be added between bullets. Similarly, ``Wenumerate'' and ``Wdescription'' are
+available to replace ``enumerate'' and ``description''.
+\item An example of a citation is \citep{cran}
+\item Here is a formula
+%
+\begin{align*}
+f(x) = \int_{-\infty}^\infty \frac{1}{\sigma \sqrt{2 \pi}}
+\exp\left\{ -\frac{1}{2 \sigma^2} (x - \mu)^2  \right\} dx.
+\end{align*}
 
 \end{Witemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Foiltex Setup}
+%----------------------------------------------------------------
+\begin{frame}{References}
+\small
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{frame}
 
-\begin{verbatim}
-\documentclass[20pt,landscape,footrule]{foils}
-\begin{document}
-\title{ Title of Presentation }
-\author{ Author's name }
-\date{ date of Presentation }
-\maketitle
-\MyLogo{ text for footer or header }
-\foilhead{ title of slide }
-contents of slide
-\foilhead{ title of slide }
-contents of slide
-...
+\appendix
+
 \end{document}
-\end{verbatim}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Slide Example}
-\begin{verbatim}
-\foilhead{Definition from (college) Algebra}
-\begin{displaymath}
-Crazy math goes here!
-\end{displaymath}
-\end{verbatim}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Definition from (college) Algebra}
-\textbf{Definition}: The $p^{\textrm{th}}$ supported deRham cohomology group of $M$
-\begin{displaymath}
-H^p_c(M) = \frac{\textrm{Ker}[d: \mathcal{A}^p_c(M) \longrightarrow \mathcal{A}^{p+1}_c(M)]}{\textrm{Im}[d: \mathcal{A}^{p-1}_c(M) \longrightarrow \mathcal{A}^{p}_c(M)]}
-\end{displaymath}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Advantages and Disadvantages}
-\begin{Witemize}
-\item Easiest, Fastest to use\\
-\item Simpleness may be limiting\\
-\item Boring to look at ?\\
-\end{Witemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{For more information}
-\begin{Witemize}
-\item Documentation for Foiltex\\
-\texttt{http://www.tex.ac.uk/tex-archive/nonfree/macros/latex/contrib/}\\
-\texttt{foiltex/foiltex.pdf}\\[.5cm]
-\item Get what you can from an internet search
-\end{Witemize}
-\end{frame}
-\end{document}
-
