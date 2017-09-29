@@ -12,7 +12,7 @@ We liked the font ("computer modern sans serif") and wide
 spacing between bullet points. We created a theme for Beamer that attempts to
 capture this look, but allows all the functionality of Beamer to be used.
 
-Example slides using our theme can be found [here](http://www.umbc.edu/~araim1/pub/beamerthemefoiltex/example-slides.pdf).
+Example slides using our theme can be found [here](https://drive.google.com/uc?export=view&id=0B-2GT91ukpxVNl91eEUxT0EzaFU).
 This example can be created from `example-slides.tex` included in the source code.
 
 Here are some notes.
