@@ -3,14 +3,14 @@
 
 \usetheme{foiltex}
 
-\usepackage{natbib}
+\usepackage[round]{natbib}
 
 \begin{document}
 
 \title[Short title]{Title of My Talk}
 \author[My Name]{My Name}
 \institute[My Institution]{My Institution}
-\date[3/31/2017]{March 31, 2017}
+\date[Short Date]{Date of My Talk}
 
 %----------------------------------------------------------------
 \begin{frame}[plain]
@@ -25,21 +25,32 @@
 %----------------------------------------------------------------
 \begin{frame}{Overview}
 \begin{Witemize}[10pt]
-\item Here is an example of a talk using the ``foiltex'' beamer theme.
+\item Here is an example of a talk using the ``foiltex'' beamer theme. It is a very plain theme (on purpose).
 \item The ``Witemize'' block is like ``itemize'' except extra spacing can
-be added between bullets. Similarly, ``Wenumerate'' and ``Wdescription'' are
+be added between bullets.
+\item Similarly, ``Wenumerate'' and ``Wdescription'' are
 available to replace ``enumerate'' and ``description''.
-\item An example of a citation is \citep{cran}
+\item Examples of citations are \citep{cran} and \citet{HastieTibshiraniFriedman2009}. References are listed at
+the end, in a very plain format.
 \item Here is a formula
 %
 \begin{align*}
-f(x) = \int_{-\infty}^\infty \frac{1}{\sigma \sqrt{2 \pi}}
-\exp\left\{ -\frac{1}{2 \sigma^2} (x - \mu)^2  \right\} dx.
+\Phi(x) = \int_{-\infty}^x \frac{1}{\sigma \sqrt{2 \pi}}
+\exp\left\{ -\frac{1}{2 \sigma^2} (t - \mu)^2  \right\} dt.
 \end{align*}
 
 \end{Witemize}
 \end{frame}
 
+%----------------------------------------------------------------
+\begin{frame}{Overview}
+\begin{Witemize}[10pt]
+\item At the bottom of each slide, we show the short name, short title, section/subsection name, and slide number.
+\end{Witemize}
+\end{frame}
+
+
+\section{References}
 %----------------------------------------------------------------
 \begin{frame}{References}
 \small
