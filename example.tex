@@ -1,8 +1,6 @@
-\documentclass[10pt,final,xcolor=svgnames]{beamer}
-\mode <presentation>
+\documentclass[10pt]{beamer}
 
-\usetheme{foiltex}
-
+\usetheme{raim}
 \usepackage[round]{natbib}
 
 \begin{document}
@@ -24,14 +22,9 @@
 \section{Introduction}
 %----------------------------------------------------------------
 \begin{frame}{Overview}
-\begin{Witemize}[10pt]
-\item Here is an example of a talk using the ``foiltex'' beamer theme. It is a very plain theme (on purpose).
-\item The ``Witemize'' block is like ``itemize'' except extra spacing can
-be added between bullets.
-\item Similarly, ``Wenumerate'' and ``Wdescription'' are
-available to replace ``enumerate'' and ``description''.
-\item Examples of citations are \citep{cran} and \citet{HastieTibshiraniFriedman2009}. References are listed at
-the end, in a very plain format.
+\begin{itemize}
+\item Here is an example of slides using the theme.
+\item Examples of citations are \citep{cran} and \citet{HastieTibshiraniFriedman2009}. References are listed at the end.
 \item Here is a formula
 %
 \begin{align*}
@@ -39,14 +32,14 @@ the end, in a very plain format.
 \exp\left\{ -\frac{1}{2 \sigma^2} (t - \mu)^2  \right\} dt.
 \end{align*}
 
-\end{Witemize}
+\end{itemize}
 \end{frame}
 
 %----------------------------------------------------------------
 \begin{frame}{Overview}
-\begin{Witemize}[10pt]
+\begin{itemize}
 \item At the bottom of each slide, we show the short name, short title, section/subsection name, and slide number.
-\end{Witemize}
+\end{itemize}
 \end{frame}
 
 
@@ -58,6 +51,5 @@ the end, in a very plain format.
 \bibliography{references}
 \end{frame}
 
-\appendix
-
 \end{document}
+

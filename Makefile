@@ -1,4 +1,4 @@
-PROJNAME := example-slides
+PROJNAME := example
 
 main:
 	pdflatex $(PROJNAME)
